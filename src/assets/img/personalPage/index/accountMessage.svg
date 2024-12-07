@@ -1,0 +1,15 @@
+<svg width="53.000000" height="53.000000" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip8_69">
+			<rect id="contacts" width="53.000000" height="53.000000" fill="white"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip8_69)">
+		<rect id="Rectangle 17837" x="8.833374" y="4.416504" rx="4.000000" width="38.645832" height="44.166664" stroke="#3DCCFF" stroke-width="4.000000"/>
+		<path id="Vector" d="M34.0303 30.3442C35.4189 31.2744 39.0597 33.1736 36.8422 35.5503C35.759 36.7112 34.5526 37.5415 33.0358 37.5415L24.3809 37.5415C22.8641 37.5415 21.6577 36.7112 20.5745 35.5503C18.357 33.1736 21.9978 31.2744 23.3863 30.3442C26.6425 28.1628 30.7742 28.1628 34.0303 30.3442ZM28.7083 24.2915C26.2691 24.2915 24.2917 22.3142 24.2917 19.875C24.2917 17.4355 26.2691 15.4583 28.7083 15.4583C31.1476 15.4583 33.125 17.4355 33.125 19.875C33.125 22.3142 31.1476 24.2915 28.7083 24.2915Z" stroke="#3DCCFF" stroke-width="3.000000"/>
+		<path id="Vector" d="M11.0417 13.25L5.52087 13.25M11.0417 26.5L5.52087 26.5M11.0417 39.75L5.52087 39.75" stroke="#3DCCFF" stroke-width="4.000000" stroke-linejoin="round"/>
+	</g>
+</svg>

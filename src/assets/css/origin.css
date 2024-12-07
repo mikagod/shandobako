@@ -1,0 +1,225 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+p {
+    font-family: "微软雅黑";
+    font-size: medium;
+    line-height: 40px;
+    max-width: 100%;
+    
+}
+
+form {
+    max-width: 1000px;
+    width: 100%;
+    text-align: left;
+
+}
+
+#nongli {
+    text-indent: 5em;
+}
+
+#wh {
+    width: 180px;
+}
+
+.bt {
+    width: 100%;
+    color: aliceblue;
+    background-color: lightcoral;
+    font-size: 30px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-shadow: 0px 10px 20px 5px gainsboro;
+    margin-bottom: 30px;
+    text-align:center;
+}
+
+.dayun-bt {
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    background-color: #aa9aff;
+    font-size: 30px;
+    padding: 25px;
+    box-shadow: 0px 10px 20px 5px gainsboro;
+    margin-bottom: 30px;
+    text-align:center;
+
+}
+.liunian-bt {
+    width: 100%;
+    height: 100%;
+    color: aliceblue;
+    background-color: #ff91d3;
+    font-size: 30px;
+    padding: 25px;
+    box-shadow: 0px 10px 20px 5px gainsboro;
+    margin-bottom: 30px;
+    text-align:center;
+
+}
+
+/* From www.lingdaima.com */
+.dayun-b1 {
+    padding: 10px 15px 10px 15px;
+    border: unset;
+    font-family: SYHT;
+
+    border-radius: 30px;
+    color: #686868;
+    z-index: 1;
+    background: #9be7ff;
+    position: relative;
+    font-weight: 1000;
+    font-size: 15px;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.dayun-b1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #ffeb85;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.dayun-b1:hover {
+    color: #515050;
+}
+
+.dayun-b1:hover::before {
+    width: 100%;
+}
+
+.liunian-b1 {
+    padding: 10px 15px 10px 15px;
+    border: unset;
+    font-family: SYHT;
+
+    border-radius: 30px;
+    color: #686868;
+    z-index: 1;
+    background: #b9fce1;
+    position: relative;
+    font-weight: 1000;
+    font-size: 15px;
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.liunian-b1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background: #d8cfff;
+
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms
+}
+
+.liunian-b1:hover {
+    color: #515050;
+}
+
+.liunian-b1:hover::before {
+    width: 100%;
+}
+
+
+
+
+.b1 {
+    position: relative;
+    display: inline-block;
+    margin:0 auto;/*水平居中*/
+    padding: 15px 30px;
+    text-align: center;
+    font-family: SYHT;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fefefe;
+    background: #6694e1;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #6694e1;
+    border-radius: 25px;
+    box-shadow: inset 0 0 0 0 #5bdee3;
+}
+
+.b1:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #5bdee3;
+    
+    border: 2px solid #5bdee3;
+    border-radius: 25px;
+}
+
+.b1:active {
+    transform: scale(0.9);
+}
+
+
+
+.ymj_system {
+    width: 500px;
+    max-width: 100%;
+    margin: 0, auto;
+
+}
+
+span {
+    color: purple;
+    font-size: 15px;
+}
+
+.qr_button {
+    text-align: center;
+    margin-left: -40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.center1{
+    width: 460px;
+    margin:0 auto;/*子元素水平居中*/
+    padding-left: 30px;
+    padding-right: 10px;
+  }
+
+
+#OriName {
+    width: 300px;
+    border-radius: 10px;
+}
+
+select {
+    background-color: azure;
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    border: 2px dashed lightcoral;
+}
+
+select:hover {
+    background-color: mistyrose;
+}

@@ -1,0 +1,30 @@
+//vant输入框白色文字
+.van-field__body{
+    color: #fff;
+}
+.van-field__control {
+    color: #fff;
+    font-size: 14PX;
+  }
+  
+  .van-field__control::-webkit-input-placeholder {
+    line-height: 32px;
+    color: #fff;
+    font-size: 12PX;
+  }
+  
+  .van-field__control::-moz-placeholder {
+    line-height: 32px;
+    color: #fff;
+    font-size: 12PX;
+  }
+  .van-field__control:-moz-placeholder {
+    line-height: 32px;
+    color: #fff;
+    font-size: 12PX;
+  }
+  .van-field__control:-ms-input-placeholder {
+    line-height: 32px;
+    color: #fff;
+    font-size: 12PX;
+  }
