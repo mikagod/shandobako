@@ -1,15 +1,19 @@
 <script setup>
 
-    import { ref } from 'vue' // 导入vue相关的方法
+    import { ref,defineComponent  } from 'vue' // 导入vue相关的方法
     import { useGlobalStore } from '@/stores/global' // 全局状态管理实例 useGlobalStore
     import Background from '@/components/container/bg.vue' // 导入 bg.vue 组件
     
-    let clickIntoBtn = '/src/assets/image/img/Btn点击进入.png' // 导入“点击进入按钮”图片
+    const clickIntoBtn = new URL('/src/assets/image/img/Btn点击进入.png', import.meta.url).href; // 导入“点击进入按钮”图片
 
     const numPage = ref(1) // 当前页码
     const global = useGlobalStore() // 全局状态
     global.showWhiteBG = true; // 让白色下背景显示
 
+    // 为组件命名
+    defineComponent({
+      name: 'LuckAnalysis1',
+    });
 </script>
 
 <template>
@@ -33,7 +37,7 @@
           </template>
           <!-- 按钮区 -->
           <template #btn>
-            <router-link to="/2" style="display: flex; justify-content: center; align-items: center;">
+            <router-link to="/luckAnalysis2" style="display: flex; justify-content: center; align-items: center;">
               <img class="btn" :src=clickIntoBtn alt="图片失效" @click="btnClick">
             </router-link>
           </template>

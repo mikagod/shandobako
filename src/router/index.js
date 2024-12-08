@@ -262,7 +262,152 @@ const routes = [{
 		},
 		
 		// 数测人生
-		{ path: '/luckAnalysis', component: () => import('@/views/luckAnalysis/luck-analysis-1.vue') },
+		{ 
+			path: '/luckAnalysis', 
+			component: () => import('@/views/luckAnalysis/luck-analysis-1.vue').then(module => {
+				module.default.name = 'LuckAnalysis1';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }),
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+		{ 
+			path: '/luckAnalysis2',
+			component: () => import('@/views/luckAnalysis/luck-analysis-2.vue').then(module => {
+				module.default.name = 'LuckAnalysis2';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }),
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+		{
+			path: '/luckAnalysis3', 
+			component: () => import('@/views/luckAnalysis/luck-analysis-3.vue').then(module => {
+				module.default.name = 'LuckAnalysis3';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }), 
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+		{ 
+			path: '/luckAnalysis4', 
+			component: () => import('@/views/luckAnalysis/luck-analysis-4.vue').then(module => {
+				module.default.name = 'LuckAnalysis4';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }), 
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+		{ 
+			path: '/yearly-luck-5', 
+			component: () => import('@/views/luckAnalysis/yearly-luck/luck-analysis-5.vue').then(module => {
+				module.default.name = 'LuckAnalysisYearlyLuck5';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }),
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+		{ 
+			path: '/yearly-luck-6', 
+			component: () => import('@/views/luckAnalysis/yearly-luck/luck-analysis-6.vue').then(module => {
+				module.default.name = 'LuckAnalysisYearlyLuck6';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }), 
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+	  
+		{ 
+			path: '/recent-luck-5', 
+			component: () => import('@/views/luckAnalysis/recent-luck/luck-analysis-5.vue').then(module => {
+				module.default.name = 'LuckAnalysisRecentLuck5';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }), 
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+		{ 
+			path: '/recent-luck-6', 
+			component: () => import('@/views/luckAnalysis/recent-luck/luck-analysis-6.vue').then(module => {
+				module.default.name = 'LuckAnalysisRecentLuck6';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }), 
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
+	  
+		{ 
+			path: '/luckAnalysis7', 
+			component: () => import('@/views/luckAnalysis/luck-analysis-7.vue').then(module => {
+				module.default.name = 'LuckAnalysis7';  // 确保异步加载的组件有正确的 name
+				return module;
+			  }), 
+			meta: { keepAlive: false },  // 指示该组件不应该被缓存
+			beforeEnter: (to, from, next) => {
+				if (localStorageObject.getToken()) {
+					next();
+				} else {
+					alert("您还未登录，请先登录！")
+					next("/login")
+				}
+			}
+		},
 
 	]
 },

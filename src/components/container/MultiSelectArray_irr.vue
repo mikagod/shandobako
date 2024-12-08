@@ -224,21 +224,22 @@ function toggleCheck(index) {
                 /* 文字图片 */
                 .item .font-img {
                     margin-left: 18px;
-                    transform: scale(0.35);
+                    transform: scale(0.7);
+                    height: 20px;
                 }
             /* 小选项 */    
             .s-item {
-                width: 46%;
+                width: 45%;
                 height: 50px;
             }
             /* 大选项 */
             .b-item {
-                width: calc(80% + 60px);
+                width: 100%;
                 height: 50px;
             }
             /* 占位选项 */
             .s-item-placeholder {
-                width: 44%;
+                width: 45%;
                 height: 0;
             }
         }

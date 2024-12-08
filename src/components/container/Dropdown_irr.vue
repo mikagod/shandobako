@@ -83,38 +83,38 @@
 
     // 处理 选项中文字大于8导致的过宽的问题（有效，但不是最好的方法）
     // 窗口变化的时候
-    function handle8cnCharItem(){
-        if (window.innerWidth >= 768) {
-            let container = document.querySelector('.irr-container');
-            container.style.transform = 'scale(1.0)';
-        }
-        // 使用 watch 监听 paths 的变化
-        watch(() => selectedStore.paths, (newPaths) => {
-            console.log('paths目前的长度：', newPaths.length);
+    // function handle8cnCharItem(){
+    //     if (window.innerWidth >= 768) {
+    //         let container = document.querySelector('.irr-container');
+    //         container.style.transform = 'scale(1.0)';
+    //     }
+    //     // 使用 watch 监听 paths 的变化
+    //     watch(() => selectedStore.paths, (newPaths) => {
+    //         console.log('paths目前的长度：', newPaths.length);
 
-            if (newPaths.length > 0) {
-                newPaths.forEach((el, idx) => {
-                    // 从路径中提取 中文名
-                    const regex = /\/assets\/image\/img\/(font_blue|font_white)\/recent_luck\/([^\/]+)\.png$/;
-                    const match = el.match(regex);
+    //         if (newPaths.length > 0) {
+    //             newPaths.forEach((el, idx) => {
+    //                 // 从路径中提取 中文名
+    //                 const regex = /\/src\/assets\/image\/img\/(font_blue|font_white)\/recent_luck\/([^\/]+)\.png$/;
+    //                 const match = el.match(regex);
 
-                    if (match && match[2]) {
-                        const name = match[2];
-                        // 如果中文字符数大于8个字，则缩小滑动框
-                        if (name.length > 8 && window.innerWidth < 768) {
-                            console.log("超过8个字的选项：", name);
-                            let container = document.querySelector('.irr-container');
-                            container.style.transform = 'scale(0.55)';
-                        }
-                    }
-                });
-            }
-        }, { deep: true }); // 深度监听数组内部的变化
-    }
-    onMounted(() => {
-        handle8cnCharItem()
-        window.addEventListener('resize', handle8cnCharItem);
-    })
+    //                 if (match && match[2]) {
+    //                     const name = match[2];
+    //                     // 如果中文字符数大于8个字，则缩小滑动框
+    //                     if (name.length > 8 && window.innerWidth < 768) {
+    //                         console.log("超过8个字的选项：", name);
+    //                         let container = document.querySelector('.irr-container');
+    //                         container.style.transform = 'scale(0.55)';
+    //                     }
+    //                 }
+    //             });
+    //         }
+    //     }, { deep: true }); // 深度监听数组内部的变化
+    // }
+    // onMounted(() => {
+    //     handle8cnCharItem()
+    //     window.addEventListener('resize', handle8cnCharItem);
+    // })
 
 
 

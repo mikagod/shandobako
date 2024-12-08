@@ -1,8 +1,8 @@
 <!-- 数选框 组件 -->
 <script setup>
 // 引入图片
-import itemDefaul from '/src/assets/image/img/Property 1=Defaul.png'
-import itemVariant from '/src/assets/image/img/Property 1=Variant.png'
+const itemDefaul = new URL('/src/assets/image/img/Property 1=Defaul.png', import.meta.url).href;
+const itemVariant = new URL('/src/assets/image/img/Property 1=Variant.png', import.meta.url).href;
 // 导入模块
 import { reactive, ref, onUnmounted  } from 'vue'
 import { useGlobalStore } from '@/stores/global'; // 导入 全局状态管理实例 useGlobalStore

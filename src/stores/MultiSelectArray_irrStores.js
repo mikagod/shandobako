@@ -1,78 +1,78 @@
 // 导入文字图片
-let move_omens = '/src/assets/image/img/font_blue/recent_luck/搬迁事情的吉凶预兆.png';
-let fortune = '/src/assets/image/img/font_blue/recent_luck/财运如何.png';
-let work_promotion = '/src/assets/image/img/font_blue/recent_luck/工作官运.png';
-let company_development = '/src/assets/image/img/font_blue/recent_luck/公司发展.png';
-let investment = '/src/assets/image/img/font_blue/recent_luck/投资.png';
-let emotional_experience_marriage = '/src/assets/image/img/font_blue/recent_luck/情感体验和婚姻婚外情.png';
-let interpersonal_relationships = '/src/assets/image/img/font_blue/recent_luck/人际关系.png';
-let who_can_help = '/src/assets/image/img/font_blue/recent_luck/谁能帮你解决问题.png';
-let seeking_assistance = '/src/assets/image/img/font_blue/recent_luck/求人办事.png';
-let bearing_children = '/src/assets/image/img/font_blue/recent_luck/生育子女.png';
-let physical_mental_health = '/src/assets/image/img/font_blue/recent_luck/身心健康.png';
-let medical_treatment = '/src/assets/image/img/font_blue/recent_luck/伤病治疗.png';
-let marriage = '/src/assets/image/img/font_blue/recent_luck/嫁娶.png';
-let official_disputes = '/src/assets/image/img/font_blue/recent_luck/官灾是非.png';
-let learning_exams = '/src/assets/image/img/font_blue/recent_luck/学习考试过关.png';
-let travel = '/src/assets/image/img/font_blue/recent_luck/旅游出行.png';
-let vehicle_use = '/src/assets/image/img/font_blue/recent_luck/车辆使用.png';
-let buying_renting_houses = '/src/assets/image/img/font_blue/recent_luck/买卖房屋.png';
-let ancestral_grave_relocation = '/src/assets/image/img/font_blue/recent_luck/迁移祖先坟墓.png';
-let feng_shui_changes = '/src/assets/image/img/font_blue/recent_luck/风水变化.png';
-let lost_items = '/src/assets/image/img/font_blue/recent_luck/失物找寻.png';
-let tattoos_scars = '/src/assets/image/img/font_blue/recent_luck/纹身（伤疤）.png';
-let making_new_friends_contacting_old_friends = '/src/assets/image/img/font_blue/recent_luck/结交新友联络旧友.png';
-let helping_others = '/src/assets/image/img/font_blue/recent_luck/帮助他人.png';
-let unfair_improper_actions = '/src/assets/image/img/font_blue/recent_luck/做了不公平不正当甚至是害人的事情.png';
-let resignation = '/src/assets/image/img/font_blue/recent_luck/辞职.png';
-let skill_enhancement = '/src/assets/image/img/font_blue/recent_luck/技能修养提升.png';
-let living_with_others = '/src/assets/image/img/font_blue/recent_luck/与人同室居住.png';
-let family_member_passing = '/src/assets/image/img/font_blue/recent_luck/亲人去世.png';
-let harming_animals = '/src/assets/image/img/font_blue/recent_luck/杀害伤害动物.png';
-let loss_damage_of_items = '/src/assets/image/img/font_blue/recent_luck/物品的丢失损毁.png';
-let adopting_abandoning_animals = '/src/assets/image/img/font_blue/recent_luck/收养（或弃养）动物.png';
-let losing_people_pets = '/src/assets/image/img/font_blue/recent_luck/人和动物与你走失.png';
-let weather_impact_on_major_events = '/src/assets/image/img/font_blue/recent_luck/做大事时的天气影响.png';
+const move_omens = new URL('/src/assets/image/img/font_blue/recent_luck/搬迁事情的吉凶预兆.png', import.meta.url).href;
+const fortune = new URL('/src/assets/image/img/font_blue/recent_luck/财运如何.png', import.meta.url).href;
+const work_promotion = new URL('/src/assets/image/img/font_blue/recent_luck/工作官运.png', import.meta.url).href;
+const company_development = new URL('/src/assets/image/img/font_blue/recent_luck/公司发展.png', import.meta.url).href;
+const investment = new URL('/src/assets/image/img/font_blue/recent_luck/投资.png', import.meta.url).href;
+const emotional_experience_marriage = new URL('/src/assets/image/img/font_blue/recent_luck/情感体验和婚姻婚外情.png', import.meta.url).href;
+const interpersonal_relationships = new URL('/src/assets/image/img/font_blue/recent_luck/人际关系.png', import.meta.url).href;
+const who_can_help = new URL('/src/assets/image/img/font_blue/recent_luck/谁能帮你解决问题.png', import.meta.url).href;
+const seeking_assistance = new URL('/src/assets/image/img/font_blue/recent_luck/求人办事.png', import.meta.url).href;
+const bearing_children = new URL('/src/assets/image/img/font_blue/recent_luck/生育子女.png', import.meta.url).href;
+const physical_mental_health = new URL('/src/assets/image/img/font_blue/recent_luck/身心健康.png', import.meta.url).href;
+const medical_treatment = new URL('/src/assets/image/img/font_blue/recent_luck/伤病治疗.png', import.meta.url).href;
+const marriage = new URL('/src/assets/image/img/font_blue/recent_luck/嫁娶.png', import.meta.url).href;
+const official_disputes = new URL('/src/assets/image/img/font_blue/recent_luck/官灾是非.png', import.meta.url).href;
+const learning_exams = new URL('/src/assets/image/img/font_blue/recent_luck/学习考试过关.png', import.meta.url).href;
+const travel = new URL('/src/assets/image/img/font_blue/recent_luck/旅游出行.png', import.meta.url).href;
+const vehicle_use = new URL('/src/assets/image/img/font_blue/recent_luck/车辆使用.png', import.meta.url).href;
+const buying_renting_houses = new URL('/src/assets/image/img/font_blue/recent_luck/买卖房屋.png', import.meta.url).href;
+const ancestral_grave_relocation = new URL('/src/assets/image/img/font_blue/recent_luck/迁移祖先坟墓.png', import.meta.url).href;
+const feng_shui_changes = new URL('/src/assets/image/img/font_blue/recent_luck/风水变化.png', import.meta.url).href;
+const lost_items = new URL('/src/assets/image/img/font_blue/recent_luck/失物找寻.png', import.meta.url).href;
+const tattoos_scars = new URL('/src/assets/image/img/font_blue/recent_luck/纹身（伤疤）.png', import.meta.url).href;
+const making_new_friends_contacting_old_friends = new URL('/src/assets/image/img/font_blue/recent_luck/结交新友联络旧友.png', import.meta.url).href;
+const helping_others = new URL('/src/assets/image/img/font_blue/recent_luck/帮助他人.png', import.meta.url).href;
+const unfair_improper_actions = new URL('/src/assets/image/img/font_blue/recent_luck/做了不公平不正当甚至是害人的事情.png', import.meta.url).href;
+const resignation = new URL('/src/assets/image/img/font_blue/recent_luck/辞职.png', import.meta.url).href;
+const skill_enhancement = new URL('/src/assets/image/img/font_blue/recent_luck/技能修养提升.png', import.meta.url).href;
+const living_with_others = new URL('/src/assets/image/img/font_blue/recent_luck/与人同室居住.png', import.meta.url).href;
+const family_member_passing = new URL('/src/assets/image/img/font_blue/recent_luck/亲人去世.png', import.meta.url).href;
+const harming_animals = new URL('/src/assets/image/img/font_blue/recent_luck/杀害伤害动物.png', import.meta.url).href;
+const loss_damage_of_items = new URL('/src/assets/image/img/font_blue/recent_luck/物品的丢失损毁.png', import.meta.url).href;
+const adopting_abandoning_animals = new URL('/src/assets/image/img/font_blue/recent_luck/收养（或弃养）动物.png', import.meta.url).href;
+const losing_people_pets = new URL('/src/assets/image/img/font_blue/recent_luck/人和动物与你走失.png', import.meta.url).href;
+const weather_impact_on_major_events = new URL('/src/assets/image/img/font_blue/recent_luck/做大事时的天气影响.png', import.meta.url).href;
 
 
-let move_omens_white = '/src/assets/image/img/font_white/recent_luck/搬迁事情的吉凶预兆.png';
-let fortune_white = '/src/assets/image/img/font_white/recent_luck/财运如何.png';
-let work_promotion_white = '/src/assets/image/img/font_white/recent_luck/工作官运.png';
-let company_development_white = '/src/assets/image/img/font_white/recent_luck/公司发展.png';
-let investment_white = '/src/assets/image/img/font_white/recent_luck/投资.png';
-let emotional_experience_marriage_white = '/src/assets/image/img/font_white/recent_luck/情感体验和婚姻婚外情.png';
-let interpersonal_relationships_white = '/src/assets/image/img/font_white/recent_luck/人际关系.png';
-let who_can_help_white = '/src/assets/image/img/font_white/recent_luck/谁能帮你解决问题.png';
-let seeking_assistance_white = '/src/assets/image/img/font_white/recent_luck/求人办事.png';
-let bearing_children_white = '/src/assets/image/img/font_white/recent_luck/生育子女.png';
-let physical_mental_health_white = '/src/assets/image/img/font_white/recent_luck/身心健康.png';
-let medical_treatment_white = '/src/assets/image/img/font_white/recent_luck/伤病治疗.png';
-let marriage_white = '/src/assets/image/img/font_white/recent_luck/嫁娶.png';
-let official_disputes_white = '/src/assets/image/img/font_white/recent_luck/官灾是非.png';
-let learning_exams_white = '/src/assets/image/img/font_white/recent_luck/学习考试过关.png';
-let travel_white = '/src/assets/image/img/font_white/recent_luck/旅游出行.png';
-let vehicle_use_white = '/src/assets/image/img/font_white/recent_luck/车辆使用.png';
-let buying_renting_houses_white = '/src/assets/image/img/font_white/recent_luck/买卖房屋.png';
-let ancestral_grave_relocation_white = '/src/assets/image/img/font_white/recent_luck/迁移祖先坟墓.png';
-let feng_shui_changes_white = '/src/assets/image/img/font_white/recent_luck/风水变化.png';
-let lost_items_white = '/src/assets/image/img/font_white/recent_luck/失物找寻.png';
-let tattoos_scars_white = '/src/assets/image/img/font_white/recent_luck/纹身（伤疤）.png';
-let making_new_friends_contacting_old_friends_white = '/src/assets/image/img/font_white/recent_luck/结交新友联络旧友.png';
-let helping_others_white = '/src/assets/image/img/font_white/recent_luck/帮助他人.png';
-let unfair_improper_actions_white = '/src/assets/image/img/font_white/recent_luck/做了不公平不正当甚至是害人的事情.png';
-let resignation_white = '/src/assets/image/img/font_white/recent_luck/辞职.png';
-let skill_enhancement_white = '/src/assets/image/img/font_white/recent_luck/技能修养提升.png';
-let living_with_others_white = '/src/assets/image/img/font_white/recent_luck/与人同室居住.png';
-let family_member_passing_white = '/src/assets/image/img/font_white/recent_luck/亲人去世.png';
-let harming_animals_white = '/src/assets/image/img/font_white/recent_luck/杀害伤害动物.png';
-let loss_damage_of_items_white = '/src/assets/image/img/font_white/recent_luck/物品的丢失损毁.png';
-let adopting_abandoning_animals_white = '/src/assets/image/img/font_white/recent_luck/收养（或弃养）动物.png';
-let losing_people_pets_white = '/src/assets/image/img/font_white/recent_luck/人和动物与你走失.png';
-let weather_impact_on_major_events_white = '/src/assets/image/img/font_white/recent_luck/做大事时的天气影响.png';
+const move_omens_white = new URL('/src/assets/image/img/font_white/recent_luck/搬迁事情的吉凶预兆.png', import.meta.url).href;
+const fortune_white = new URL('/src/assets/image/img/font_white/recent_luck/财运如何.png', import.meta.url).href;
+const work_promotion_white = new URL('/src/assets/image/img/font_white/recent_luck/工作官运.png', import.meta.url).href;
+const company_development_white = new URL('/src/assets/image/img/font_white/recent_luck/公司发展.png', import.meta.url).href;
+const investment_white = new URL('/src/assets/image/img/font_white/recent_luck/投资.png', import.meta.url).href;
+const emotional_experience_marriage_white = new URL('/src/assets/image/img/font_white/recent_luck/情感体验和婚姻婚外情.png', import.meta.url).href;
+const interpersonal_relationships_white = new URL('/src/assets/image/img/font_white/recent_luck/人际关系.png', import.meta.url).href;
+const who_can_help_white = new URL('/src/assets/image/img/font_white/recent_luck/谁能帮你解决问题.png', import.meta.url).href;
+const seeking_assistance_white = new URL('/src/assets/image/img/font_white/recent_luck/求人办事.png', import.meta.url).href;
+const bearing_children_white = new URL('/src/assets/image/img/font_white/recent_luck/生育子女.png', import.meta.url).href;
+const physical_mental_health_white = new URL('/src/assets/image/img/font_white/recent_luck/身心健康.png', import.meta.url).href;
+const medical_treatment_white = new URL('/src/assets/image/img/font_white/recent_luck/伤病治疗.png', import.meta.url).href;
+const marriage_white = new URL('/src/assets/image/img/font_white/recent_luck/嫁娶.png', import.meta.url).href;
+const official_disputes_white = new URL('/src/assets/image/img/font_white/recent_luck/官灾是非.png', import.meta.url).href;
+const learning_exams_white = new URL('/src/assets/image/img/font_white/recent_luck/学习考试过关.png', import.meta.url).href;
+const travel_white = new URL('/src/assets/image/img/font_white/recent_luck/旅游出行.png', import.meta.url).href;
+const vehicle_use_white = new URL('/src/assets/image/img/font_white/recent_luck/车辆使用.png', import.meta.url).href;
+const buying_renting_houses_white = new URL('/src/assets/image/img/font_white/recent_luck/买卖房屋.png', import.meta.url).href;
+const ancestral_grave_relocation_white = new URL('/src/assets/image/img/font_white/recent_luck/迁移祖先坟墓.png', import.meta.url).href;
+const feng_shui_changes_white = new URL('/src/assets/image/img/font_white/recent_luck/风水变化.png', import.meta.url).href;
+const lost_items_white = new URL('/src/assets/image/img/font_white/recent_luck/失物找寻.png', import.meta.url).href;
+const tattoos_scars_white = new URL('/src/assets/image/img/font_white/recent_luck/纹身（伤疤）.png', import.meta.url).href;
+const making_new_friends_contacting_old_friends_white = new URL('/src/assets/image/img/font_white/recent_luck/结交新友联络旧友.png', import.meta.url).href;
+const helping_others_white = new URL('/src/assets/image/img/font_white/recent_luck/帮助他人.png', import.meta.url).href;
+const unfair_improper_actions_white = new URL('/src/assets/image/img/font_white/recent_luck/做了不公平不正当甚至是害人的事情.png', import.meta.url).href;
+const resignation_white = new URL('/src/assets/image/img/font_white/recent_luck/辞职.png', import.meta.url).href;
+const skill_enhancement_white = new URL('/src/assets/image/img/font_white/recent_luck/技能修养提升.png', import.meta.url).href;
+const living_with_others_white = new URL('/src/assets/image/img/font_white/recent_luck/与人同室居住.png', import.meta.url).href;
+const family_member_passing_white = new URL('/src/assets/image/img/font_white/recent_luck/亲人去世.png', import.meta.url).href;
+const harming_animals_white = new URL('/src/assets/image/img/font_white/recent_luck/杀害伤害动物.png', import.meta.url).href;
+const loss_damage_of_items_white = new URL('/src/assets/image/img/font_white/recent_luck/物品的丢失损毁.png', import.meta.url).href;
+const adopting_abandoning_animals_white = new URL('/src/assets/image/img/font_white/recent_luck/收养（或弃养）动物.png', import.meta.url).href;
+const losing_people_pets_white = new URL('/src/assets/image/img/font_white/recent_luck/人和动物与你走失.png', import.meta.url).href;
+const weather_impact_on_major_events_white = new URL('/src/assets/image/img/font_white/recent_luck/做大事时的天气影响.png', import.meta.url).href;
 
 // 导入图标（选中、未选中）
-let unChooseIcon = '/src/assets/image/img/未选.png'; // 未选图标
-let hvChooseIcon = '/src/assets/image/img/已选.png'; // 已选图标
+const unChooseIcon = new URL('/src/assets/image/img/未选.png', import.meta.url).href; // 未选图标
+const hvChooseIcon = new URL('/src/assets/image/img/已选.png', import.meta.url).href; // 已选图标
 
 // 定义背景颜色（选中、未选中）
 const bgColor = {
@@ -207,15 +207,15 @@ export const useSelected_irrStore = defineStore('selected_irr', () => {
         // 获取选中后的选项路径
         function getSelectedPaths() {
             paths.value = names.value.map((name) => {
-                return "/src/assets/image/img/font_blue/recent_luck/" + name + ".png";    
+                return "/src/assets/image/img/font_blue/recent_luck/" + name + ".png"
             })
             
             paths_backup.value = names.value.map((name) => {
-                return "/src/assets/image/img/font_blue/recent_luck/" + name + ".png";    
+                return "/src/assets/image/img/font_blue/recent_luck/" + name + ".png" 
             })
 
             paths_white.value = names.value.map((name) => {
-                return "/src/assets/image/img/font_white/recent_luck/" + name + ".png";    
+                return "/src/assets/image/img/font_white/recent_luck/" + name + ".png"   
             })
             console.log('初始化完毕')
             console.log( paths.value)
@@ -495,9 +495,9 @@ export const useSelected_irrStore = defineStore('selected_irr', () => {
                 // 预处理数组元素，去掉前缀和后缀
                 let prefix = '';
                 if (arr[0].includes('font_blue')) {
-                    prefix = '/src/assets/image/img/font_blue/recent_luck/';
+                    prefix = '/src/assets/image/img/font_blue/recent_luck/'
                 } else if (arr[0].includes('font_white')) {
-                    prefix = '/src/assets/image/img/font_white/recent_luck/';
+                    prefix = '/src/assets/image/img/font_white/recent_luck/'
                 }
                 const suffix = '.png';
                 const processedArr = arr.map(path => path.replace(prefix, '').replace(suffix, ''));

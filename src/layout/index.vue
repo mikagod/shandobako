@@ -231,7 +231,19 @@
 		</div>
 	</div>
 	<router-view v-slot="{ Component }">
-		<keep-alive>
+		<!-- 数测人生相关页面皆不做缓存处理 -->
+		<keep-alive 
+			:exclude="[
+				'LuckAnalysis1',
+				'LuckAnalysis2',
+				'LuckAnalysis3',
+				'LuckAnalysis4',
+				'LuckAnalysisRecentLuck5',
+				'LuckAnalysisRecentLuck6',
+				'LuckAnalysisYearlyLuck5',
+				'LuckAnalysisYearlyLuck6',
+				'LuckAnalysis7'
+			]">
 			<component :is="Component" />
 		</keep-alive>
 	</router-view>
