@@ -151,6 +151,12 @@
 									</a>
 								</router-link>
 
+								<router-link to="/luckAnalysis">
+									<a class="navbar-item" href="https://www.baidu.com">
+										数测人生系统
+									</a>
+								</router-link>
+
 
 								<router-link to="/juecheye">
 									<a class="navbar-item" href="">

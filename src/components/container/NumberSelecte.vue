@@ -245,6 +245,7 @@ img {
 .items {
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     position: relative;
+    cursor: pointer;
 }
 /* 选项 */
 .itemImg {

@@ -37,15 +37,16 @@
     const global = useGlobalStore(); // 全局状态管理实例
     global.showWhiteBG = true; // 让白色下背景显示
 
+//*********************************************处理API数据********************************************************
         // 异步数据
         const data = ref(null);
 
-        // 在 mounted 生命周期钩子中调用异步函数
+        // 在 mounted 生命周期钩子中调用异步函数 处理 API
         onMounted(async () => {
           try {
             const response = await postDataToApi(
               global.selectedItems__Num,
-              '/axios/fleeting/reason'
+              'fleeting/reason'
             );
             data.value = formatContentString(response.data.content);
             console.log(data.value);
@@ -64,6 +65,7 @@
                         .replace(/改变自己的运气！/g, '改变自己的运气！<br/><br/><br/>')
                         .replace(/《数测人生》/g, ' &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp《数测人生》')
         }
+//**************************************************************************************************************
 
         // 为组件命名
         defineComponent({
@@ -119,7 +121,7 @@
         height: 100%;
         margin: 65px 0;
         user-select: none;
-        pointer-events: none;
+        cursor: pointer;
     }
 
   /* ********************媒体查询 */

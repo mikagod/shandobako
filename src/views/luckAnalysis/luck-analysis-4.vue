@@ -50,14 +50,14 @@
       }
     }
 
-
+//*********************************************处理API数据********************************************************
     // 异步数据
     const data = ref(null);
 
     // api url 根据全局状态值动态变化
-    let api_url = global.luckValue === '流年运气' ? '/axios/fleeting/instructions' : '/axios/recent/instructions';
+    let api_url = global.luckValue === '流年运气' ? '/fleeting/instructions' : '/recent/instructions';
 
-    // 在 mounted 生命周期钩子中调用异步函数
+    // 在 mounted 生命周期钩子中调用异步函数 处理 API
     onMounted(async () => {
       try {
         const response = await postDataToApi(
@@ -75,6 +75,7 @@
     function formatContentString(content) {
       return "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp"+content
     }
+//**************************************************************************************************************
 </script>
 
 <template>
@@ -134,7 +135,7 @@
         height: 100%;
         margin: 65px 0;
         user-select: none;
-        pointer-events: none;
+        cursor: pointer;
     }
 
   /* ********************媒体查询 */

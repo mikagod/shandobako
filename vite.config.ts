@@ -24,6 +24,13 @@ export default defineConfig({
       //   changeOrigin: true,
       //   rewrite: (path) => path.replace(/^\/ipJson.jsp/, ""),
       // },
+
+      /** 数测人生用的代理 */
+      '/api': {
+        target: 'https://www.shandobako.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      },
     },
   },
   resolve: {

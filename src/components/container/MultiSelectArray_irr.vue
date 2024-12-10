@@ -114,19 +114,24 @@ function toggleCheck(index) {
             <img :src="selectedStore.chooseIcon[index]" alt="图片失效" class="icon-img">
             <img :src="imgUrlArray[index]" alt="图片失效" class="font-img">
         </div>
-        <div class="item s-item" style="background-color: #f4edff;">
+        <div class="item s-item item-no-cursor" style="background-color: #f4edff;">
             <img src="/src/assets/image/img/必选.png" alt="图片失效" class="icon-img">
             <img src="/src/assets/image/img/人工咨询服务.png" alt="图片失效" class="font-img">
         </div>
         <!-- 占位隐形选项 -->
-        <div class="item s-item-placeholder"></div>
-        <div class="item s-item-placeholder"></div>
-        <div class="item s-item-placeholder"></div>
-        <div class="item s-item-placeholder"></div>
+        <div class="item s-item-placeholder item-no-cursor"></div>
+        <div class="item s-item-placeholder item-no-cursor"></div>
+        <div class="item s-item-placeholder item-no-cursor"></div>
+        <div class="item s-item-placeholder item-no-cursor"></div>
 
 </template>
 
 <style scoped>
+        /* 禁止鼠标图标变成可点击状态 */
+        .item-no-cursor {
+            pointer-events: none;
+        }
+
         img {
             user-select: none;
         }
@@ -138,6 +143,7 @@ function toggleCheck(index) {
             align-items: center;
             justify-content: center;
             position: relative;
+            cursor: pointer;
         }
             /* 选中图标 */
             .item .icon-img {

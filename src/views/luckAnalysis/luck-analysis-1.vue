@@ -73,10 +73,11 @@
       }
         .cat {
             width: 100%; /* 猫图占满盒子 */
-      
+            user-select: none;
         }
         .main-font {
             width: 100%; /* 字图占满盒子 */
+            user-select: none;
         }
 
       /* 按钮 */	
@@ -84,6 +85,8 @@
         width: 100%;
         height: 100%;
         margin: 65px 0;
+        cursor: pointer;
+        user-select: none;
       }
 		
     

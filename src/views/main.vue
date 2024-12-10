@@ -59,7 +59,7 @@
     </div>
 
   <!-- 数测人生 入口  -->
-    <div class="enterLuckAnalysis">
+    <div class="enterLuckAnalysis" style="cursor: pointer;">
         <img :src="numBtn" alt="数测人生" @click="toLuckAnalysis" />
     </div>
   </div>
@@ -166,6 +166,10 @@ function toLuckAnalysis() {
 
 <style scoped>
 @import url("../assets/css/main.css");
+
+img, br {
+  user-select: none; /*  禁止用户选择图片 */
+}
 
 .round{
   width: 384px;

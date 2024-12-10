@@ -1,4 +1,5 @@
-import axios from 'axios';
+// import axios from 'axios';
+import axios from "./dayunIndex"; // 用的dayunIndex的过滤器等
 
 /**
  * 发送POST请求，获取数据。
@@ -9,12 +10,7 @@ import axios from 'axios';
  */
 export const postDataToApi = async (data, API_URL) => {
   try {
-    const response = await axios.post(API_URL, data, {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      timeout: 10000 // 设置请求超时时间为10秒
-    });
+    const response = await axios.post(API_URL, data);
     return response.data;
   } catch (error) {
     console.error('Detailed error:', error);

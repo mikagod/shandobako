@@ -10,6 +10,7 @@
     import { useSelectedStore } from '@/stores/MultiSelectArraySelectedStores' // 导入多选列表组件状态管理实例 useSelectedStore
     import { useSelected_irrStore } from '@/stores/MultiSelectArray_irrStores';
     import { postDataToApi } from '@/axios/articles' // 导入 postDataToApi 函数
+    import { ElMessageBox } from 'element-plus'; // 弹窗组件
 
     // 下拉框组件的宽高
     const dropdownComponentWidth = ref('600px') 
@@ -17,18 +18,15 @@
 
     // 根据屏幕尺寸动态设置 Dropdown组件的宽度和高度、page-1的决定子类排列方向的类
     const resizeSetter = () => {
-      if (window.innerWidth >= 1200) {
+      if (window.innerWidth > 1366.98) {
         dropdownComponentWidth.value = '1100px'
         dropdownComponentHeight.value = '1090px'
-      } else if (window.innerWidth >= 380 && window.innerWidth <= 767.98) {
-        dropdownComponentWidth.value = '80%'
+      } else if (window.innerWidth >= 380 && window.innerWidth <= 1366.98) {
+        dropdownComponentWidth.value = '88%'
         dropdownComponentHeight.value = '555px'
       } else if (window.innerWidth <= 380){
         dropdownComponentWidth.value = '88%'
         dropdownComponentHeight.value = '550px'
-      } else {
-        dropdownComponentWidth.value = '500px'
-        dropdownComponentHeight.value = '1090px'
       }
     }
     resizeSetter() // 初始化时设置一次
@@ -69,12 +67,12 @@
     const contentList = ref(null);
     const tail = ref(null);
 
-    // 在 mounted 生命周期钩子中调用异步函数
+    // 在 mounted 生命周期钩子中调用异步函数 处理 API
     onMounted(async () => {
       try {
         const response = await postDataToApi(
           global.selectedItems__Num, 
-          global.luckValue === "流年运气" ? '/axios/fleeting/analysisReport' : '/axios/recent/analysisReport'
+          global.luckValue === "流年运气" ? '/fleeting/analysisReport' : '/recent/analysisReport'
         );
         prefix.value = formatContentString(response.data.prefix, false, true);
         contentList.value = formatContentArray(response.data.contentList);
@@ -141,6 +139,34 @@
     };
     //**************************************************************************************************************
 
+    // ***********************************如果刷新数据为空的话，跳转到首页**************************************************    // 页面加载前检查 sessionStorage 标志并重定向
+    const isRefresh = ref(false);
+    // 检查 sessionStorage 中是否有刷新标记
+    const checkRefresh = () => {
+      const refreshFlag = sessionStorage.getItem('refreshFlag');
+      if (refreshFlag) {
+        // 如果有标记，说明是刷新后的页面加载
+        // 执行跳转逻辑（这里跳转到首页）
+        router.push('/');
+        // 清除标记，避免下次加载时再次跳转
+        sessionStorage.removeItem('refreshFlag');
+      } else {
+        // 如果没有标记，设置标记以便下次加载时能够识别出是刷新操作
+        sessionStorage.setItem('refreshFlag', 'true');
+      }
+    };
+
+    // 在组件挂载时检查刷新标记
+    onMounted(() => {
+      checkRefresh();
+    });
+
+    // 在组件卸载时清除标记（可选，因为标记会在下次加载时被覆盖）
+    onBeforeUnmount(() => {
+      sessionStorage.removeItem('refreshFlag');
+    });
+    //**************************************************************************************************************
+
     // 为组件命名
     defineComponent({
       name: 'LuckAnalysis7',
@@ -167,7 +193,7 @@
 
                     <div v-for="item in contentList" :key="item.id" >
                       <div style="margin-top: 15px;">
-                        <div class="content-api"><b>{{ item.title }}</b></div>
+                        <div class="content-api content-title"><b>{{ item.title }}</b></div>
                         <div class="content-api" v-html="item.content"></div>
                       </div>
                     </div>
@@ -191,6 +217,9 @@
     /* 后端数据静态内容 */
     .content-api {
       font-size: 16px;
+    }
+    .content-title {
+        color: #485fc7;
     }
     .required-content {
       font-weight: bold;
@@ -217,14 +246,14 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-        top: 1063px;
+        top: 1260px;
     }
     .btn {
         width: 100%;
         height: 100%;
         margin: 65px 0;
         user-select: none;
-        pointer-events: none;
+        cursor: pointer;
     }
 
   /* ********************媒体查询 */
@@ -244,7 +273,7 @@
         margin: 50px 0;
       }
       .btn-superbox {
-        top: 1081px;
+        top: 1300px;
       }
 
     }
@@ -267,7 +296,7 @@
         margin: 50px 0;
         }
         .btn-superbox {
-          top: 605px;
+          top: 580px;
         }
     }
 </style>

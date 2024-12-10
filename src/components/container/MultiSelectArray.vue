@@ -240,7 +240,7 @@ function toggleCheck(index) {
     </div>
     <!-- 必选小盒子 -->
      <div
-        class="items"
+        class="items item-no-cursor"
         :style="{
             backgroundColor:'#f4edff',
             width: itemWidth,
@@ -267,17 +267,21 @@ function toggleCheck(index) {
             </div>
      </div>
     <!-- 占位小盒子 -->
-    <div class="items" :style="{ height: '0', width: itemWidth, }"></div>
-    <div class="items" :style="{ height: '0', width: itemWidth, }"></div>
-    <div class="items" :style="{ height: '0', width: itemWidth, }"></div>
-    <div class="items" :style="{ height: '0', width: itemWidth, }"></div>
-    <div class="items" :style="{ height: '0', width: itemWidth, }"></div>
-    <div class="items" :style="{ height: '0', width: itemWidth, }"></div>
+    <div class="items item-no-cursor" :style="{ height: '0', width: itemWidth, }"></div>
+    <div class="items item-no-cursor" :style="{ height: '0', width: itemWidth, }"></div>
+    <div class="items item-no-cursor" :style="{ height: '0', width: itemWidth, }"></div>
+    <div class="items item-no-cursor" :style="{ height: '0', width: itemWidth, }"></div>
+    <div class="items item-no-cursor" :style="{ height: '0', width: itemWidth, }"></div>
+    <div class="items item-no-cursor" :style="{ height: '0', width: itemWidth, }"></div>
 </div>
 
 </template>
 
 <style lang="css" scoped>
+/* 禁止鼠标图标变成可点击状态 */
+.item-no-cursor {
+    pointer-events: none;
+}
 
 img {
     user-select: none;
@@ -298,7 +302,7 @@ img {
         justify-content: flex-start;
         align-items: center;
         position: relative;
-        
+        cursor: pointer;
 
     }
         .font-item {

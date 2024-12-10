@@ -209,7 +209,11 @@ img {
         height: 100%;
         margin: 65px 0;
         user-select: none;
-        pointer-events: none;
+        cursor: pointer;
+    }
+
+    .cat_botton {
+        cursor: pointer;
     }
 
   /* ********************媒体查询 */

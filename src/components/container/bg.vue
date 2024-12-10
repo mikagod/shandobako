@@ -81,7 +81,8 @@ onUnmounted(() => {
 			/* height: 800px; */
 			/* background: blue; */
 			/* max-width: 2660px; */
-            max-width: 1680px !important; /* 为了让其在总项目里显示数测人生正常宽度 */
+            width: 100%;
+            max-width: 2680px !important; /* 为了让其在总项目里显示数测人生正常宽度 */
 			margin: 0 auto;
             overflow: hidden; /* 因为目前有竖屏移动端往左拉会拉到右边留白，所以直接锁住！ */
 		}
