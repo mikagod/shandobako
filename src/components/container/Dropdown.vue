@@ -1,3 +1,4 @@
+<!-- 流年运气专用框 -->
 <!-- 下滑框 组件 -->
 <template>
 <div class="title-font">

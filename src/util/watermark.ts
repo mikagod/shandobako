@@ -61,6 +61,8 @@ export const getmark = () => {
 
         // div.id = id;
 
+        div.className = "watermark";
+
         div.style.pointerEvents = "none";
 
         div.style.position = "absolute";

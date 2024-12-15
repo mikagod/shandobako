@@ -2,8 +2,8 @@ const localStorageObject = {
     // 定义一个方法来设置token
     setToken(authToken) {
         const expirationTime = Date.now() + 6 * 60 * 60 * 1000; // 当前时间加上6个小时
-        localStorage.setItem('authToken', authToken);
-        localStorage.setItem('authTokenExpiration', expirationTime.toString());
+        localStorage.setItem('authToken', authToken); // token
+        localStorage.setItem('authTokenExpiration', expirationTime.toString()); //  6 小时的时间戳
     },
     // 定义一个方法来获取token
     getToken() {

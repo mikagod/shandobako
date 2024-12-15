@@ -70,6 +70,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next()
 				} else {
+					store.state.token = ''; // 设置token为空字符串 （每次都加这个设置token为空字符串，为了让“退出”按钮切换为“登录”按钮）
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -84,6 +85,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next()
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -97,6 +99,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next()
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -111,6 +114,7 @@ const routes = [{
 					window.scrollTo(0, 0);
 					next()
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -125,6 +129,7 @@ const routes = [{
 					window.scrollTo(0, 0);
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -139,6 +144,7 @@ const routes = [{
 					window.scrollTo(0, 0);
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -210,6 +216,7 @@ const routes = [{
 								if (localStorageObject.getToken()) {
 									next();
 								} else {
+									store.state.token = ''; // 设置token为空字符串
 									alert("您还未登录，请先登录！")
 									next("/login")
 								}
@@ -271,8 +278,11 @@ const routes = [{
 			meta: { keepAlive: false },  // 指示该组件不应该被缓存
 			beforeEnter: (to, from, next) => {
 				if (localStorageObject.getToken()) {
+					console.log('token: ',store.state.token)
 					next();
 				} else {
+					console.log('token: ',store.state.token)
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -289,6 +299,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -305,6 +316,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -321,6 +333,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -337,6 +350,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -353,6 +367,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -370,6 +385,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -386,6 +402,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -403,6 +420,7 @@ const routes = [{
 				if (localStorageObject.getToken()) {
 					next();
 				} else {
+					store.state.token = ''; // 设置token为空字符串
 					alert("您还未登录，请先登录！")
 					next("/login")
 				}
@@ -435,6 +453,7 @@ const routes = [{
 				next();
 			}
 		} else {
+			store.state.token = ''; // 设置token为空字符串
 			alert("您还未登录，请先登录！")
 			next("/login")
 		}
@@ -455,6 +474,7 @@ const routes = [{
 			}
 			next();
 		} else {
+			store.state.token = ''; // 设置token为空字符串
 			alert("您还未登录，请先登录！")
 			next("/login")
 		}

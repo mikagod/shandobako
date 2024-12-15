@@ -18,7 +18,7 @@
 					</router-link>
 
           <span class="is-hidden1 navbar-item">
-							<router-link style="margin-top: 1vw;" v-if="$route.path != '/login' && $store.state.token == ''" class="button is-info is-rounded"
+							<router-link style="margin-top: 1vw;" v-if="$route.path != '/login' && store.state.token == ''" class="button is-info is-rounded"
                            to="/login">
 								<span>登录</span>
 							</router-link>
@@ -96,7 +96,7 @@
 <!--										</a>-->
 <!--									</el-dropdown-item>-->
 									<el-dropdown-item>
-										<a class="navbar-item" v-if="$route.path != '/login' && $store.state.token != ''" @click="startLogout()">
+										<a class="navbar-item" v-if="$route.path != '/login' && store.state.token != ''" @click="startLogout()">
 											安全退出
 										</a>
 									</el-dropdown-item>
@@ -218,11 +218,11 @@
 							<!-- <a class="button is-info is-rounded" href="login.html">
 								<span>登录</span>
 							</a> -->
-							<router-link v-if="$route.path != '/login' && $store.state.token == ''" class="button is-info is-rounded"
+							<router-link v-if="$route.path != '/login' && store.state.token == ''" class="button is-info is-rounded"
 								to="/login">
 								<span>登录</span>
 							</router-link>
-							<div class="button is-info is-rounded" v-if="$route.path != '/login' && $store.state.token != ''" @click="submit">
+							<div class="button is-info is-rounded" v-if="$route.path != '/login' && store.state.token != ''" @click="submit">
 								退出
 							</div>
 							<router-link v-if="$route.path == '/login'" class="button is-info is-rounded" to="/register">

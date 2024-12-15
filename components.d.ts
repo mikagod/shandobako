@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Bg: typeof import('./src/components/container/bg.vue')['default']
     Dropdown: typeof import('./src/components/container/Dropdown.vue')['default']
+    Dropdown_final: typeof import('./src/components/container/Dropdown_final.vue')['default']
     Dropdown_irr: typeof import('./src/components/container/Dropdown_irr.vue')['default']
     MultiSelectArray: typeof import('./src/components/container/MultiSelectArray.vue')['default']
     MultiSelectArray_irr: typeof import('./src/components/container/MultiSelectArray_irr.vue')['default']

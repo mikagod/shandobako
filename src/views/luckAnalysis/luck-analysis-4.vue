@@ -16,16 +16,13 @@
       if (window.innerWidth >= 1200) {
         dropdownComponentWidth.value = '1100px'
         dropdownComponentHeight.value = '400px'
-      } else if (window.innerWidth >= 380 && window.innerWidth <= 767.98) {
-        dropdownComponentWidth.value = '86%'
+      } else if (window.innerWidth > 414 && window.innerWidth <= 767.98) {
+        dropdownComponentWidth.value = '92%'
         dropdownComponentHeight.value = '555px'
-      } else if (window.innerWidth <= 380){
-        dropdownComponentWidth.value = '77%'
+      } else if (window.innerWidth <= 414){
+        dropdownComponentWidth.value = '90%'
         dropdownComponentHeight.value = '555px'
-      } else {
-        dropdownComponentWidth.value = '500px'
-        dropdownComponentHeight.value = '400px'
-      }
+      } 
     }
     resizeSetter() // 初始化时设置一次
     window.addEventListener('resize', resizeSetter) // 监听窗口尺寸变化

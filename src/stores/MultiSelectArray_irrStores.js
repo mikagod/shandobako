@@ -1,3 +1,5 @@
+/* 用于数测人生 近期运气多选列表 */
+
 // 导入文字图片
 const move_omens = new URL('/src/assets/image/img/font_blue/recent_luck/搬迁事情的吉凶预兆.png', import.meta.url).href;
 const fortune = new URL('/src/assets/image/img/font_blue/recent_luck/财运如何.png', import.meta.url).href;

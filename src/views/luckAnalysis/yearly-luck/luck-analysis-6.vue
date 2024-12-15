@@ -92,18 +92,45 @@
     global.luckValue = '流年运气' // 模块设置为流年运气
 
 
-    //-------------------第4页 传来的数据放pinia保存。包括视图也用这个数据--------------------------------
-    selectedStore.selectedItems_5 =  global.selectedItems
-    console.log(`selectedItems_5：`,selectedStore.selectedItems_5)
-    //---------------------------------------------------
-    selectedStore.selectedItems_backup_5 = global.selectedItems
-    console.log(`selectedItems_backup_5：`,selectedStore.selectedItems_backup_5)
-    //---------------------------------------------------
-    global.selectedItems_white !== undefined ? selectedStore.selectedItems_white_5 = global.selectedItems_white.map (item => {
-        return item.replace(/\/src\/assets\/image\/img\/font_blue\/yearly_luck\//, '/src/assets/image/img/font_white/yearly_luck/');
-      }) : console.log('没有数据');
-    console.log(`selectedItems_white_5：`,selectedStore.selectedItems_white_5)
-    //---------------------------------------------------
+    /**
+     * 对用于在视图中展示的数据做数 据持久化处理（防止刷新后，数据丢失。）
+     * 
+     * ps：`近期运气模块`没做持久化处理，而是一刷新就自动重选。
+     * 
+     * 先判断有选项数据没
+     *    有则用从上一页得来的选项数据
+     *    没有的话就判断localStorage里有没有
+     *        有则用localStorage里的
+     *        没有的话就提示“重新选择”
+     */
+    if (global.selectedItems.length === 0) {
+      console.log('localStorage: ',localStorage.getItem('selectedItems_5'))
+      if(localStorage.getItem('selectedItems_5') && localStorage.getItem('selectedItems_white_5')) {
+        selectedStore.selectedItems_5 = JSON.parse(localStorage.getItem('selectedItems_5'));
+        selectedStore.selectedItems_white_5 = JSON.parse(localStorage.getItem('selectedItems_white_5'));
+        console.log('用的持久化的数据')
+      }else{
+        alert('请点击"重新选择"！');
+      }
+    }else{
+      //-------------------第4页 传来的数据放pinia保存。包括视图也用这个数据--------------------------------
+      selectedStore.selectedItems_5 =  global.selectedItems
+      console.log(`selectedItems_5：`,selectedStore.selectedItems_5)
+      //---------------------------------------------------
+      selectedStore.selectedItems_backup_5 = global.selectedItems
+      console.log(`selectedItems_backup_5：`,selectedStore.selectedItems_backup_5)
+      //---------------------------------------------------
+      global.selectedItems_white !== undefined ? selectedStore.selectedItems_white_5 = global.selectedItems_white.map (item => {
+          return item.replace(/\/src\/assets\/image\/img\/font_blue\/yearly_luck\//, '/src/assets/image/img/font_white/yearly_luck/');
+        }) : console.log('没有数据');
+      console.log(`selectedItems_white_5：`,selectedStore.selectedItems_white_5)
+      //---------------------------------------------------
+      // 持久化
+      localStorage.setItem('selectedItems_white_5', JSON.stringify(selectedStore.selectedItems_white_5))
+      localStorage.setItem('selectedItems_5', JSON.stringify(selectedStore.selectedItems_5))
+      console.log('localStorage.getItem(selectedItems_5)：',localStorage.getItem('selectedItems_5'))
+    }
+
 
 
 
@@ -129,14 +156,15 @@
 
     // 监听点击预测按钮（待完善...）
     function handleClickPredict(event) {
-      if (global.selectedItems.length !== global.selectedItems__Num.length) {
+      let itemsFromlocalStorage =  JSON.parse(localStorage.getItem('selectedItems_5')).length
+      if (itemsFromlocalStorage !== global.selectedItems__Num.length) {
         event.preventDefault(); // 阻止默认行为
         console.log(`global.selectedItems.length =`, global.selectedItems.length)
         console.log(`global.selectedItems__Num.length =`, global.selectedItems__Num.length)
         alert('请给全部模块绑定数字！');
       } else {
         // 如果没选任何选项就跳转到对应页面先选好，如果选好了就正常跳转到后面的页面
-        if (global.selectedItems.length === 0 && global.selectedItems__Num.length === 0){
+        if (itemsFromlocalStorage === 0 && global.selectedItems__Num.length === 0){
           router.push('/yearly-luck-5'); // 使用路由器实例进行跳转
         }else {
           console.log(`pinia里的selectedItems__Num状态`,global.selectedItems__Num);
@@ -146,6 +174,8 @@
       }
       
     }
+
+
 
     // 监听重选按钮
     function handleReSelect() {

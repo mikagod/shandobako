@@ -2,7 +2,7 @@
   <div class="main-center-wrap">
     <div style="margin-bottom: 24px"></div>
     <div class="main m-2">
-      <a href="main.html">{{data.msg}}</a>
+      <a href="/">{{data.msg}}</a>
 
     </div>
 <!-- 原命路由跳转 -->
@@ -122,7 +122,7 @@ watch(
             var type = res.data.data.type;
 
             if (decision <=0  && type ===0) {
-              store.state.showGetVIP=true
+              store.state.showGetVIP=true // 弹出开通会员界面
             } else {
               store.state.showGetVIP=false
             }

@@ -1,3 +1,5 @@
+/* 用于数测人生 */
+
 // src/stores/global.js
 import { defineStore } from 'pinia';
 import { reactive, ref } from 'vue';
@@ -7,7 +9,7 @@ export const useGlobalStore = defineStore('global', () => {
   // 决定是否显示 白色下背景
   const showWhiteBG = ref(true);
 
-  // 保存 `流年运气` 或 `近期运气`
+  // 保存 `流年运气` 或 `近期运气` 字符
   const luckValue = ref('');
 
   // 保存 被选中的元素 数组
@@ -27,6 +29,7 @@ export const useGlobalStore = defineStore('global', () => {
   
   // 用于 显示数选框
   const showNumSelecte = ref(false);
+
 
 
 

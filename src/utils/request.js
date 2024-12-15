@@ -39,7 +39,7 @@ axios.interceptors.request.use(
 axios.interceptors.response.use(
   function(response) {
     // 对响应数据做点什么
-    if (response.status == 200) {
+    if (response.status == 200) { 
       if (response.data.code != 0) {
         //阻止弹窗多次弹出
         if (showMsg) {

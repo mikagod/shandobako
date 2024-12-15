@@ -17,14 +17,14 @@
       if (window.innerWidth >= 1200) {
         dropdownComponentWidth.value = '1100px'
         dropdownComponentHeight.value = '400px'
-      } else if (window.innerWidth >= 380 && window.innerWidth <= 767.98) {
-        dropdownComponentWidth.value = '92%'
+      } else if (window.innerWidth > 414 && window.innerWidth <= 767.98) {
+        dropdownComponentWidth.value = '88%'
+        dropdownComponentHeight.value = '555px'
+      } else if (window.innerWidth <= 414){
+        dropdownComponentWidth.value = '75%'
         dropdownComponentHeight.value = '555px'
       } else if (window.innerWidth <= 380){
-        dropdownComponentWidth.value = '92%'
-        dropdownComponentHeight.value = '555px'
-      } else {
-        dropdownComponentWidth.value = '92%'
+        dropdownComponentWidth.value = '75%'
         dropdownComponentHeight.value = '400px'
       }
     }
@@ -71,6 +71,8 @@
         defineComponent({
           name: 'LuckAnalysis2',
         });
+
+        console.log(localStorage,`我看看localStorage里面有啥！？`)
 </script>
 
 <template>

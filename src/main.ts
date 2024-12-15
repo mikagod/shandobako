@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia';
 import 'bulma/css/bulma.css'
-import '@/assets/css/global.css' // 全局样式
 
 import App from './App.vue' 
 import bulma from 'bulma'

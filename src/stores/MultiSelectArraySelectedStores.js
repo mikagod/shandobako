@@ -1,3 +1,5 @@
+/* 用于数测人生 流年运气多选列表 */
+
 // 多选列表的图片资源
 const injuryTreatmentBtn = new URL('/src/assets/image/img/font_blue/yearly_luck/财运如何.png', import.meta.url).href;
 const workOfficialLuck = new URL('/src/assets/image/img/font_blue/yearly_luck/工作官运.png', import.meta.url).href;
