@@ -544,9 +544,14 @@ const getganzhishi =  (ganzhishi)  =>{
 }
 
 .YYL-center1{
-    width: 515px;
-    margin:0 auto;/*子元素水平居中*/
+    width: 544px;
   }
+
+@media screen and (max-width: 700px) {
+  .YYL-center1{
+    width: auto;
+  }
+}
 
 #gcYear {
     background-color: azure;

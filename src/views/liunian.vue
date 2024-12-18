@@ -14,22 +14,28 @@
     </div>
 
     <div class="center1">
-      <p>
-        <label for="OriName">
-          <span>姓名: </span> </label>
-<br>
-        <input class="input is-info" type="text" id="OriName" name="OriName" placeholder="请输入您的姓名" maxlength="6"   v-model="data.oriName"
-          size="20">
-      </p>
 
-      <p>
-        <span>性别：</span>
+      <div class="YYL-top YYL-top-unique">
+        <p>
+          <label for="OriName">
+            <span>姓名: </span> </label>
         <br>
-        <input type="radio" id="gender" name="gender" value="1" v-model="data.gender"/> 男
-        <input type="radio" id="gender" name="gender" value="0" v-model="data.gender"/> 女
-      </p>
+          <input class="input is-info" type="text" id="OriName" name="OriName" placeholder="请输入您的姓名" maxlength="6"   v-model="data.oriName"
+            size="20">
+        </p>
 
-      <YYL @getValue="getDayunCard"></YYL>
+        <p>
+          <span>性别：</span>
+          <br>
+          <input type="radio" id="gender" name="gender" value="1" v-model="data.gender"/> 男
+          <input type="radio" id="gender" name="gender" value="0" v-model="data.gender"/> 女
+        </p>
+      </div>
+
+
+      <div class="YYL-super">
+       <YYL @getValue="getSonValue"></YYL>
+      </div>
 
 
 
@@ -87,7 +93,16 @@
             <span style="color: red;" >*</span>&nbsp;
             本系统不分析人的死亡时间、智力水平、学历文凭。
           </p>
-          <p class="has-text-centered">
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <p class="has-text-centered">
             <button
                 class="b1"
                 name="bigyButton"
@@ -97,14 +112,8 @@
             </button>
             <br>
             <br>
-          </p>
-        </div>
-
-
-
-      </div>
-
-    </div>
+    </p>
+    
   </div>
 
 </template>
@@ -345,4 +354,10 @@ const tiemarr = [
   margin-bottom: 10px;
 }
 
+/* 流年决策系统的特殊调整 */
+@media screen and (max-width: 768px) {
+  .YYL-top-unique {
+    width: 80vw !important;
+  }
+}
 </style>

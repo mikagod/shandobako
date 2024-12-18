@@ -83,6 +83,13 @@
 										</router-link>
 									</el-dropdown-item>
 									<el-dropdown-item>
+										<router-link to="/luckAnalysis">
+											<a class="navbar-item" href="">
+												数测人生
+											</a>
+										</router-link>
+									</el-dropdown-item>
+									<el-dropdown-item>
                     <router-link to="/connectus">
 										<a class="navbar-item" href="">
 											联系我们

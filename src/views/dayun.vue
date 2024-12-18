@@ -11,6 +11,7 @@
       <h1 id="ymjbt">大运决策系统</h1>
     </div>
   </div>
+  
   <div class="center1">
 
     <div style="margin-bottom:24px" class="
@@ -22,23 +23,27 @@
     </div>
 
 
-    <p>
-      <label for="OriName">
-        <span>姓名: </span> </label>
+    <div class="YYL-top YYL-top-unique">
+      <p>
+        <label for="OriName">
+          <span>姓名: </span> </label>
 
-      <input class="input is-info" type="text" id="OriName" name="OriName" placeholder="请输入您的姓名" maxlength="6"
-             v-model="data.oriName"
-             size="20">
-    </p>
+        <input class="input is-info" type="text" id="OriName" name="OriName" placeholder="请输入您的姓名" maxlength="6"
+              v-model="data.oriName"
+              size="20">
+      </p>
 
-    <p>
-      <span>性别：</span>
-      <input type="radio" id="gender" name="gender" value="1" v-model="data.gender"/> 男
-      <input type="radio" id="gender" name="gender" value="0" v-model="data.gender"/> 女
-    </p>
+      <p>
+        <span>性别：</span>
+        <input type="radio" id="gender" name="gender" value="1" v-model="data.gender"/> 男
+        <input type="radio" id="gender" name="gender" value="0" v-model="data.gender"/> 女
+      </p>
+    </div>
 
 
-    <YYL @getValue="getSonValue"></YYL>
+    <div class="YYL-super">
+      <YYL @getValue="getSonValue"></YYL>
+    </div>
 
     <p class="help is-info is-marginless">
       <span style="color: red;">*</span>&nbsp;
@@ -54,6 +59,8 @@
       <br>
 
     </p>
+
+    
     <div :hidden="hidden">
 
       <dayuncard @getValue="getDayunCardIndex" :dayunArr="dayunArr"></dayuncard>
@@ -96,7 +103,15 @@
         <span style="color: red;">*</span>&nbsp;
         本系统不分析人的死亡时间、智力水平、学历文凭。
       </p>
-      <p class="has-text-centered">
+
+
+    </div>
+
+
+
+  </div>
+  
+  <p class="has-text-centered">
         <button
             class="b1"
             @click="submit2"
@@ -105,12 +120,7 @@
         </button>
         <br>
         <br>
-      </p>
-
-    </div>
-
-
-  </div>
+  </p>
 
 </template>
 
@@ -330,5 +340,10 @@ watch(
 <style scoped>
 @import url('../assets/css/origin.css');
 
-
+/* 大运决策系统的特殊调整 */
+@media screen and (max-width: 768px) {
+  .YYL-top-unique {
+    width: 80vw !important;
+  }
+}
 </style>

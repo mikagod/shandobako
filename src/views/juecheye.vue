@@ -10,7 +10,10 @@
       <img src="../assets/img/juecheye/flower.gif" alt="Example GIF">
     </div>
     <br>
+
+    
     <div class="search">
+
         <span class="back-and-date">
             <img src="../assets/img/juecheye/left.png" class="clear" @click="clearSearch" v-bind:title="'显示所有'">
 
@@ -31,19 +34,18 @@
             </span>
         </span>
 
-
-      <span class="search-search-byname">
-
+        <span class="search-search-byname">
             <input class="search-byname-font" type="text" placeholder="请输入被预测者姓名查询报告&nbsp;例:周星驰" v-model="conditions.userName">
-
-
-
             <img src="../assets/img/juecheye/x.png" style="width: 16px;height: 16px;" @click="conditions.userName=''">
             <span class="search-byname-right" @click="search">
                 查询
             </span>
         </span>
+
     </div>
+
+
+
     <div class="result-Page">
       <unit :datas="data.records"></unit>
       <div class="page-container">
@@ -286,11 +288,10 @@ const clearSearch = () => {
     outline: none;
 }
 .search-search-byname {
-    margin-left: 20px;
     display: flex;
     align-items: center;
     /* 垂直居中 */
-    width: 436px;
+    width: 385px;
     font-size: 15px;
     color: rgb(98, 97, 97);
     background-color: #ffffff;
@@ -336,7 +337,7 @@ const clearSearch = () => {
     /* 垂直居中 */
     @media only screen and (max-width: 1110px) {
         flex-direction: column;
-        width: 470px;
+        width: 390px;
     }
 }
 

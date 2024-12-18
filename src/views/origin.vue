@@ -10,32 +10,39 @@
       </div>
     </div>
     <div class="center1">
-      <p>
-        <label for="OriName"> <span>姓名: </span> </label>
-        <br />
 
-        <input
-          class="input is-info"
-          type="text"
-          id="OriName"
-          name="OriName"
-          placeholder="请输入您的姓名"
-          v-model="data.oriName"
-          maxlength="6"
-          size="20"
-        />
-      </p>
+      <div class="YYL-top YYL-top-unique">
+        <p>
+          <label for="OriName"> <span>姓名: </span> </label>
+          <br />
 
-      <p>
-        <span>性别：</span>
-        <br />
-        <input type="radio" id="sex" name="sex" value="1" v-model="data.sex" />
-        男
-        <input type="radio" id="sex" name="sex" value="0" v-model="data.sex" />
-        女
-      </p>
+          <input
+            class="input is-info"
+            type="text"
+            id="OriName"
+            name="OriName"
+            placeholder="请输入您的姓名"
+            v-model="data.oriName"
+            maxlength="6"
+            size="20"
+          />
+        </p>
 
+        <p>
+          <span>性别：</span>
+          <br />
+          <input type="radio" id="sex" name="sex" value="1" v-model="data.sex" />
+          男
+          <input type="radio" id="sex" name="sex" value="0" v-model="data.sex" />
+          女
+        </p>
+      </div>
+
+<div class="YYL-super">
       <YYL @getValue="getSonValue"  @getGanzhiValue="getganzhiValue"></YYL>
+      
+
+      
       <p>
         <span>身高：</span>
         <br />
@@ -204,13 +211,17 @@
           </option>
         </select>
       </p>
+</div>
 
       <p class="help is-info is-marginless" style="padding-bottom: 10px">
         <span style="color: red">*</span>&nbsp;
         本系统不分析人的死亡时间、智力水平、学历文凭。
       </p>
 
-      <div class="has-text-centered">
+
+    </div>
+
+    <div class="has-text-centered">
         <button
           class="b1"
           name="bigyButton"
@@ -220,10 +231,10 @@
         >
           开始决策
         </button>
-      </div>
-      <br />
-      <br />
     </div>
+    <br />
+    <br />
+
   </div>
 </template>
 
@@ -435,4 +446,12 @@ const name = ref("");
 
 <style scoped>
 @import url("../assets/css/origin.css");
+
+/* 原命决策系统的特殊调整 */
+@media screen and (max-width: 768px) {
+  .YYL-top-unique {
+    width: 80vw !important;
+  }
+}
+
 </style>
