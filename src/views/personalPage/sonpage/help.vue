@@ -103,8 +103,8 @@
 
       /* 其他样式 */
       .pic {
-        width: 112px;
-        height: 112px;
+        width: 168px;
+        height: 168px;
         margin-bottom: 8px;
         margin-top: -8px;
       }

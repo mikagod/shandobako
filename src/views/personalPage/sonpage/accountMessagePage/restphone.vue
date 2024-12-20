@@ -472,7 +472,7 @@ button {
 
         .back {
             position: absolute;
-            top: 0px;
+            top: 20px;
             left: 0px;
         }
     }

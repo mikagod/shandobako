@@ -160,15 +160,15 @@ const onFinishFailed = (errorInfo: any) => {
         .back {
             width: 40px;
             position: absolute;
-            top: 2vw;
-            left: 0px;
+            top: 5vw;
+            left: 5px;
         }
 
         .top {
             width: 170px;
             white-space: nowrap;
             font-family: 'alimama';
-            margin-top: 60px;
+            // margin-top: 60px;
             margin-bottom: 160px;
             font-size: 16px;
             color: #73c4ff;

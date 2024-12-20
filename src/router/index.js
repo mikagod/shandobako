@@ -489,5 +489,16 @@ let router = createRouter({
 	routes
 })
 
+// 全局前置守卫
+router.beforeEach((to, from, next) => {
+	// 检查目标路由是否是个人中心页面
+	if (to.name === 'rephone' || to.name === 'repswd' || to.name === 'updateAddress') {
+	  store.commit('setPersonalCenter', false); // 进入个人中心页面时设置为 false
+	} else {
+	  store.commit('setPersonalCenter', true); // 其他页面设置为 true
+	}
+	next();
+});
+
 
 export default router

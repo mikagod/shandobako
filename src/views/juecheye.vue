@@ -57,8 +57,8 @@
           <img src="../assets/img/juecheye/right.png" class="time-location-img" style="margin-left: 15px;" @click="currentPage<pagearr.length?searchPage(++currentPage):0">
         </div>
       </div>
-
     </div>
+
     <br>
   </div>
 
@@ -254,7 +254,7 @@ const clearSearch = () => {
     border-radius: 20px;
 
     @media only screen and (max-width: 1110px) {
-        width: 380px;
+        width: 360px;
     }
 }
 
@@ -271,7 +271,7 @@ const clearSearch = () => {
     width: 65px;
     height: 30px;
     margin-left: 20px;
-    padding-left: 18px;
+    padding-left: 7px;
     background-color: #4dfac9;
 }
 
@@ -291,7 +291,7 @@ const clearSearch = () => {
     display: flex;
     align-items: center;
     /* 垂直居中 */
-    width: 385px;
+    width: 320px;
     font-size: 15px;
     color: rgb(98, 97, 97);
     background-color: #ffffff;
@@ -328,6 +328,9 @@ const clearSearch = () => {
     margin-left: 38px;
     width: 150px;
 }
+.search-byname-font::placeholder {
+    font-size: 12px;
+}
 
 .search {
     width: 690px;
@@ -337,7 +340,7 @@ const clearSearch = () => {
     /* 垂直居中 */
     @media only screen and (max-width: 1110px) {
         flex-direction: column;
-        width: 390px;
+        width: 300px;
     }
 }
 
@@ -346,7 +349,7 @@ const clearSearch = () => {
     margin-bottom: 20px;
     align-items: center;
     /* 垂直居中 */
-    width: 225px;
+    width: 215px;
     font-size: 11px;
     font-weight: 500;
     color: rgb(98, 97, 97);
@@ -354,6 +357,7 @@ const clearSearch = () => {
     padding-left: 20px;
     border-radius: 100px;
 }
+
 
 .divider {
     width: 300px;

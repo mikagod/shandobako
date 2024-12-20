@@ -122,7 +122,7 @@
 .cuteQR{
   text-align: center;
   width: 240px;
-  margin: 0vw auto;
+  margin: 6vw auto;
 
 }
 </style>

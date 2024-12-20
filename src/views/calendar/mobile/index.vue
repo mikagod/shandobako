@@ -1,4 +1,6 @@
 <template>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+
   <div class="mobile">
     <img class="mobile-bgimg" :src="publicUrl + 'static/mobile/bg.png'" alt="" />
     <!-- 移动端主体内容 -->
@@ -20,7 +22,7 @@
         <img class="mobile-main-search-back" @click="router.go(-1)" src="../../../assets/img/personalPage/accountMessage/login_out/back.png" />
         <div class="mobile-main-search-inputImg" @click="showDatePicker = true">
           <img :src="publicUrl + 'static/mobile/search.png'" alt="" />
-          <van-field v-model="birthDay" class="mobile-main-search-inputImg-input" placeholder="请写下阳历生日 例：1990-03-05-12" />
+          <van-field v-model="birthDay" class="mobile-main-search-inputImg-input" placeholder="请写下阳历生日 例：1990-03-05-12" readonly />
         </div>
         <img class="mobile-main-search-click" :src="publicUrl + 'static/mobile/input.png'" @click="getSearchData"
           alt="" />

@@ -134,8 +134,8 @@ const emit = defineEmits(["getValue"])
 
 .dayun-card-unit-active{
     color: white;
-    width: 360px;
-    font-size: 20px;
+    width: 270px;
+    font-size: 15px;
     background-color: #bdbfff;
     height: 40px;
     border-radius: 50px;
@@ -144,5 +144,15 @@ const emit = defineEmits(["getValue"])
     margin-top: 2px;
     padding-top: 3px;
 
+}
+
+@media screen and (max-width: 768px) {
+    .dayun-card {
+        width: 300px;
+    }
+    .dayun-card-unit{
+        width: 270px;
+        font-size: 15px;
+    }
 }
 </style>

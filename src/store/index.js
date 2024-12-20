@@ -4,6 +4,7 @@ const now = new Date();
 const store = createStore({
     state() {
         return {
+            personalCenter: true, // 决定个人中心是否显示灰色底部
             showGetVIP: false,
             pdf: false,
             watermark: true,
@@ -296,6 +297,10 @@ const store = createStore({
         },
         setresult(state, result) {
             state.result = result
+        },
+        // 设置个人中心的灰色底部是否显示
+        setPersonalCenter(state, personalCenter) {
+            state.personalCenter = personalCenter;
         },
 
     },

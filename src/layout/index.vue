@@ -260,7 +260,7 @@
 			<component :is="Component" />
 		</keep-alive>
 	</router-view>
-	<div   v-if="isshowbottm()"  :hidden="store.state.pdf" class="isDisplay">
+	<div   v-if="isshowbottm()"  :hidden="store.state.pdf || !store.state.personalCenter" class="isDisplay">
 		<footer class="footer is-rounded has-background-info-light">
 			<div class="content has-text-centered">
 				<p>
