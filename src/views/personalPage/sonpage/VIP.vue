@@ -7,7 +7,8 @@
     <img  class = "right-top" src="./../../../assets/img/personalPage/VIP/右上角打折.png">
     <img  class = "right-bottom" src="./../../../assets/img/personalPage/VIP/右下角活动名额.png">
     <img  class = "left-top" src="./../../../assets/img/personalPage/VIP/左上决策次数.png">
-    <span class="count"> {{data.decision}} </span>
+    <!-- 如果是一位数，就用.count选择器，双位数则用.count2选择器 -->
+    <span :class="decisionClass"> {{ data.decision }} </span>
     <img  class = "left-bottom" src="./../../../assets/img/personalPage/VIP/左下角实体资料打折.png">
   </div>
 </template>
@@ -21,6 +22,20 @@
   const data = ref({
     decision: 0
   })
+
+// 计算属性：根据 decision 的值返回相应的类名
+const decisionClass = computed(() => {
+  // 个位数就用 .count 选择器
+  if (data.value.decision >= 0 && data.value.decision <= 9) {
+    return 'count';
+  // 十位数就用 .count2 选择器
+  } else if (data.value.decision >= 10 && data.value.decision <= 99) {
+    return 'count2';
+  } else {
+  // 百位数也用 .count 选择器
+    return 'count';
+  }
+});
 
   watch(() => store.state.showGetVIP,
        (showGetVIP) => {
@@ -65,6 +80,13 @@
       transform: scale(1.2);
     }
     .count{
+      position: absolute;
+      top: 383px;
+      left: 177px;
+      font-family: "medium";
+      color: white;
+    }
+    .count2{
       position: absolute;
       top: 383px;
       left: 177px;
@@ -139,7 +161,15 @@
       top: 309px;
       left: 97px;
       font-family: "medium";
-      font-size: 13px;
+      font-size: 11px;
+      color: white;
+    }
+    .count2{
+      position: absolute;
+      top: 309px;
+      left: 94px;
+      font-family: "medium";
+      font-size: 11px;
       color: white;
     }
     .title{
