@@ -27,7 +27,7 @@
       <p>
         <label for="OriName">
           <span>姓名: </span> </label>
-
+        <br>
         <input class="input is-info" type="text" id="OriName" name="OriName" placeholder="请输入您的姓名" maxlength="6"
               v-model="data.oriName"
               size="20">
@@ -35,6 +35,7 @@
 
       <p>
         <span>性别：</span>
+        <br>
         <input type="radio" id="gender" name="gender" value="1" v-model="data.gender"/> 男
         <input type="radio" id="gender" name="gender" value="0" v-model="data.gender"/> 女
       </p>
